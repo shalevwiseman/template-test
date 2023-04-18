@@ -22,7 +22,7 @@ function complete() {
 
 // Show New Quote
 function newQuote(){
-    // loading();
+    loading();
     // Pick a random qoute
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     // Check if author is 'unknown'
@@ -40,12 +40,12 @@ function newQuote(){
     }
     // Set Quote, Hide Loader
     qouteText.textContent = quote.text;
-    // complete();
+    complete();
 }
 
 // Get Quotes From API
 async function getQuotes(){
-    // loading();
+    loading();
     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
     try{
         const response = await fetch(apiUrl);
